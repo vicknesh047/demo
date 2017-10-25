@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+
+body {
+     background-color: #eee;
+}
+
+.fn-p-box{
+    padding: 10px 10px;
+    font-family: sans-serif;
+}
+
+.fn-p-title{
+    font-size: 30px;
+    font-family: roboto;
+    color: #6b6a6a;
+    padding: 10px 0px;
+}
+
+.fn-p-content{
+    background-color: #ffffff;
+    padding: 20px 20px;
+    border-radius: 6px;
+}
+
+.fn-p-product{
+   font-family: sans-serif;
+}
+
+.fn-p-product-title{
+    color: #5d5858;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+th,td{
+    padding: 5px;
+}
+
+th{
+    font-size: 14px;
+    color: #5f5e5e;
+}
+
+table{
+    width: 100%;
+}
+
+.fn-rightalign{
+    text-align: right;
+}
+
+.fn-center{
+    text-align: center;
+}
+
+.fn-p-orderprice{
+    color: #5f5e5e;
+    font-weight: 600;
+}
+
+hr{
+    border: 1px solid #ccc;
+}
+
+.fn-p-billingBox{
+    border-radius: 6px;
+    background-color: #eee;
+    padding: 20px
+}
+
+.fn-p-billingTitle{
+    color: #5d5858;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 30px 0px;
+}
+
+.fn-p-billingLabel{
+    font-size: 14px;
+    color: #6f6d6d;
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.fn-p-billingDiv{
+   padding: 10px 0px;
+    /*display: flex;*/
+    align-items: center;
+}
+
+.fn-p-billingInput{
+    height: 25px;
+    width: 200px;
+}
+
+textarea {
+    resize: none;
+}
+
+.fn-p-paymentBtn{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.fn-p-billingwrapper{
+    height: 250px;
+}
+
+
+@media only screen and (max-width: 500px) {
+
+.fn-p-box {
+    padding: 0px 0px;
+}
+
+.fn-p-content{
+    padding: 20px 0px;
+    border-radius: 0px;
+}
+
+.fn-p-billingBox{
+    text-align: center;
+}
+
+.fn-p-product{
+    text-align: center;
+}
+
+.fn-p-title{
+    text-align: center;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="fn-p-box">
+<div class="fn-p-title">Subscription Summary</div>
+
+<div class="fn-p-content">
+
+<div class="fn-p-product">
+<div class="fn-p-product-title">Products</div>
+
+
+
+<table>
+<tbody>
+
+<tr>
+<th>PRODUCT NAME</th>
+<th>UNIT PRICE</th>
+<th>QUANTITY</th>
+<th>TOTAL</th>
+</tr>
+
+<tr>
+<td>Standard 3 Months</td>
+<td id="fn-p-quantity" class="fn-rightalign">264</td>
+<td id="fn-p-price" class="fn-center">1</td>
+<td id="fn-p-total" class="fn-rightalign"></td>
+</tr>
+
+<tr class="fn-p-orderprice">
+<td class="fn-rightalign" colspan="3">Subtotal</td>
+<td id="fn-p-subtotal" class="fn-rightalign" colspan="1"></td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="fn-p-billingBox">
+
+<div class="fn-p-billingTitle">Billing Details</div>
+
+<form>
+<div class="container">
+<div class="row fn-p-billingwrapper">
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<div class="row">
+  <div class="fn-p-billingDiv">
+  <label class="fn-p-billingLabel">Address</label>
+  <textarea rows="3" cols="25"></textarea>
+  </div>
+
+  <div class="fn-p-billingDiv">
+  <label class="fn-p-billingLabel">Country</label>
+  <select name="country" class="countries fn-p-billingInput" id="countryId">
+    <option value="">Select Country</option>
+  </select>
+  </div>
+
+  <div class="fn-p-billingDiv">
+  <label class="fn-p-billingLabel">State</label>
+  <select name="state" class="states fn-p-billingInput" id="stateId">
+    <option value="">Select State</option>
+  </select>
+  </div>
+
+  <div class="fn-p-billingDiv">
+  <label class="fn-p-billingLabel">City</label>
+  <select name="city" class="cities fn-p-billingInput" id="cityId">
+    <option value="">Select City</option>
+  </select>
+  </div>
+</div>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 fn-p-paymentBtn">
+<div class="row">
+  <div class="fn-p-billingDiv">
+    <button type="button">Continue to Pay</button>
+  </div>
+</div>
+</div>
+
+</div>
+</div>
+</form>
+
+
+
+
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script src="//geodata.solutions/includes/countrystatecity.js"></script>
+
+</html>
